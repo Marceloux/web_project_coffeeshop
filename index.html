@@ -47,7 +47,6 @@
           <div class="header__links">
             <a class="header__link" href="#recipes">Receitas</a>
             <a class="header__link" href="#reservation">Reservar uma mesa</a>
-            <a class="header__link" href="#menu">Menu</a>
             <a class="header__link" href="#contacts">Contatos</a>
           </div>
         </nav>
@@ -133,10 +132,29 @@
 
         <section class="reservation" id="reservation">
           <h2 class="reservation__title">Reservar uma mesa</h2>
-        </section>
-
-        <section class="menu" id="menu">
-          <h2 class="menu__title">Menu</h2>
+          <form class="reservation__form">
+            <div class="reservation__form-group">
+              <label for="name" class="reservation__label">Nome: <span class="reservation__required">*</span></label>
+              <input type="text" id="name" name="name" class="reservation__input" placeholder="Nome" required />
+            </div>
+            <div class="reservation__form-group">
+              <label for="guests" class="reservation__label">Número de convidados: <span class="reservation__required">*</span></label>
+              <input type="number" id="guests" name="guests" class="reservation__input" placeholder="1-8" min="1" max="8" required />
+            </div>
+            <div class="reservation__form-group">
+              <label for="datetime" class="reservation__label">Data e hora: <span class="reservation__required">*</span></label>
+              <input type="datetime-local" id="datetime" name="datetime" class="reservation__input" required />
+            </div>
+            <div class="reservation__form-group">
+              <label for="email" class="reservation__label">Seu e-mail: <span class="reservation__required">*</span></label>
+              <input type="email" id="email" name="email" class="reservation__input" placeholder="email@email.com" required />
+            </div>
+            <div class="reservation__form-group">
+              <input type="checkbox" id="terms" name="terms" class="reservation__checkbox" required />
+              <label for="terms" class="reservation__checkbox-label">Eu concordo com os termos de uso</label>
+            </div>
+            <button type="submit" class="reservation__button">Reservar uma mesa</button>
+          </form>
         </section>
         <section class="contacts" id="contacts">
           <h2 class="contacts__title">Contatos</h2>
@@ -147,7 +165,16 @@
         </section>
       </main>
 
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__content">
+          <p class="footer__copyright">© 2024 Seu nome</p>
+          <div class="footer__social">
+            <p class="footer__social-label">Mídia social</p>
+            <a href="#" class="footer__link">Facebook</a>
+            <a href="#" class="footer__link">Instagram</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
