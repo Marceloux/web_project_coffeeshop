@@ -96,7 +96,14 @@
                 class="recipes__iframe"
                 src="https://www.youtube.com/embed/j6VlT_jUVPc"
                 title="Receita Aeropress"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
                 allowfullscreen
               ></iframe>
 
@@ -111,7 +118,14 @@
                 class="recipes__iframe"
                 src="https://www.youtube.com/embed/st571DYYTR8"
                 title="Receita de Prensa Francesa"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
                 allowfullscreen
               ></iframe>
 
@@ -125,6 +139,73 @@
 
         <section class="reservation" id="reservation">
           <h2 class="reservation__title">Reservar uma mesa</h2>
+
+          <form
+            class="form reservation__form"
+            name="reservation"
+            action="#"
+            method="post"
+          >
+            <fieldset class="form__fieldset">
+              <label class="form__label" for="name">Nome *</label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nome"
+                required
+              />
+
+              <label class="form__label" for="guests"
+                >Número de convidados *</label
+              >
+              <input
+                class="form__input"
+                type="number"
+                id="guests"
+                name="guests"
+                min="1"
+                max="8"
+                placeholder="1-8"
+                required
+              />
+
+              <label class="form__label" for="date">Data e hora *</label>
+              <input
+                class="form__input"
+                type="datetime-local"
+                id="date"
+                name="date"
+                required
+              />
+
+              <label class="form__label" for="email">Seu e-mail *</label>
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@email.com"
+                required
+              />
+
+              <button class="form__button" type="submit">
+                Reservar uma mesa
+              </button>
+
+              <label class="form__label form__label_type_checkbox" for="terms">
+                <input
+                  class="form__checkbox"
+                  type="checkbox"
+                  id="terms"
+                  name="terms"
+                  required
+                />
+                Eu concordo com os termos de uso
+              </label>
+            </fieldset>
+          </form>
         </section>
       </main>
 
